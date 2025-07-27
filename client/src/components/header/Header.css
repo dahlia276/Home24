@@ -1,0 +1,22 @@
+.header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    border-bottom: 0.0625rem solid #eaeaea;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.header__logo {
+    height: 2.625rem;
+}
+
+.header__search {
+    padding: 0.5rem 1rem;
+    border: 0.0625rem solid #dddddd;
+    border-radius: 1.25rem;
+    min-width: 12.5rem;
+}

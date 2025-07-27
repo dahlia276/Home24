@@ -1,35 +1,40 @@
-export type Category = {
-  name: string
-  categoryArticles: CategoryArticle
-  articleCount: number
-  childrenCategories: ChildCategory
+export interface Category {
+  name: string;
+  categoryArticles: CategoryArticle;
+  articleCount: number;
+  childrenCategories: ChildCategory;
 }
 
-export type Article = {
-  name:  string
-  variantName: string
-  prices: Prices
-  images: Image[]
+export interface Article {
+  id: string;
+  name: string;
+  prices: Prices;
+  images: Image[];
 }
 
-export type ChildCategory = {
-  list: Array<{
-    name: string
-    urlPath: string
-  }>
+export interface ChildCategory {
+  list: ChildCategoryItem[];
 }
 
-export type Prices = {
-  currency: string
-  regular: {
-    value: number
-  }
+export interface ChildCategoryItem {
+  name: string;
+  urlPath: string;
 }
 
-export type Image = {
-  path: string
+export interface Prices {
+  currency: string;
+  regular: RegularPrice;
 }
 
-export type CategoryArticle = {
-  articles: Article[]
+export interface RegularPrice {
+  value: number;
+}
+
+export interface Image {
+  path: string;
+  alt: string;
+}
+
+export interface CategoryArticle {
+  articles: Article[];
 }

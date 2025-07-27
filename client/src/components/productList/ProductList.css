@@ -1,0 +1,16 @@
+.product-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.product-list__title {
+  padding-left: 20px;
+}
+
+.articles {
+  display: grid;
+  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 1rem;
+}
